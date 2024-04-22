@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon"><link rel="stylesheet" href="style.css">
+    <title>ESCAPE ROOM</title>
+</head>
+<body class="para">
+  <p >Listing... Done
+    evolution-data-server-common/focal-updates,focal-updates 3.36.5-0ubuntu1 all [upgradable from: 3.36.4-0ubuntu1]
+    evolution-data-server/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    grub-common/focal-updates 2.04-1ubuntu26.12 amd64 [upgradable from: 2.04-1ubuntu26.11]
+    grub-efi-amd64-bin/focal-updates 2.04-1ubuntu44.2 amd64 [upgradable from: 2.04-1ubuntu44]
+    grub-efi-amd64-signed/focal-updates 1.167.2+2.04-1ubuntu44.2 amd64 [upgradable from: 1.167+2.04-1ubuntu44]
+    grub-efi-amd64/focal-updates 2.04-1ubuntu44.2 amd64 [upgradable from: 2.04-1ubuntu44]
+    grub2-common/focal-updates 2.04-1ubuntu26.12 amd64 [upgradable from: 2.04-1ubuntu26.11]
+    libcamel-1.2-62/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libebackend-1.2-10/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libebook-1.2-20/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libebook-contacts-1.2-3/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libecal-2.0-1/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libedata-book-1.2-26/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libedata-cal-2.0-1/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libedataserver-1.2-24/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libedataserverui-1.2-2/focal-updates 3.36.5-0ubuntu1 amd64 [upgradable from: 3.36.4-0ubuntu1]
+    libyelp0/focal-updates 3.36.2-0ubuntu1 amd64 [upgradable from: 3.36.0-1]
+    python-apt-common/focal-updates,focal-updates 2.0.0ubuntu0.20.04.5 all [upgradable from: 2.0.0ubuntu0.20.04.4]
+    python3-apt/focal-updates 2.0.0ubuntu0.20.04.5 amd64 [upgradable from: 2.0.0ubuntu0.20.04.4]
+    yelp/focal-updates 3.36.2-0ubuntu1 amd64 [upgradable from: 3.36.0-1] <br><br>man apt <br>
+
+    man apt-get <br>
+    apt --help <br>
+<br>
+    #!/bin/bash <br>
+test=$(ps -ao pid,pcpu,time,comm | head -n10) <br>
+
+for time in $(seq 1 30); do <br>
+    echo -ne "$test\r" equation (10*2) - (5*3) + (6/2)<br>
+    sleep 1 <br>
+    test=$(ps -ao pid,pcpu,time,comm | head -n10) <br>
+done <br> <br>
+Reading package lists... Done <br>
+Building dependency tree    <br>   
+Reading state information... Done <br>
+nginx is already the newest version (1.10.3-0ubuntu0.16.04.2). <br>
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded. <br>
+<br><br>
+ssh -A -n -o StrictHostKeyChecking=no ${remote_user}@${remote_host} && \ <br>
+sudo apt-get update && \ <br>
+sudo apt-get -f install -y && \<br>
+sudo apt-get -o Dpkg::Options::="--force-confnew" -yy dist-upgrade -y && \<br>
+sudo apt-get autoremove -y && \<br>
+[ -f /var/run/reboot-required ] && \<br>
+echo "sudo reboot now" && \<br>
+sudo reboot now<br>
+[10:48 pm, 22/4/2024] Abbu.. ~~: wajig dailyupgrade<br>
+sudo apt-get install wajig <br>
+sudo vi /etc/apt/sources.list<br>
+sudo apt-get update && sudo apt-get upgradesudo -s -- EOF<br>
+apt-get update<br>
+apt-get upgrade -y<br>
+apt-get full-upgrade -y<br>
+apt-get autoremove -y<br>
+apt-get autoclean -y<br>
+EOF<br>
+</p>
+</body>
+</html>

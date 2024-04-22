@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="300">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+    <title>ESCAPE ROOM</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <video id="background-video" autoplay loop muted>
+        <source src="earth.mp4" type="video/mp4">
+    </video>
+
+
+
+    <div id="vault-container">
+        <h2>Escape Room</h2>
+        <form id="vault-form">
+            <input type="password" id="vault-input1" maxlength="1" oninput="validateInput(this)" required>
+            <input type="password" id="vault-input2" maxlength="1" oninput="validateInput(this)" required>
+            <input type="password" id="vault-input3" maxlength="1" oninput="validateInput(this)" required>
+            <input type="password" id="vault-input4" maxlength="1" oninput="validateInput(this)" required>
+            <br><br>
+            <button type="button" id="unlock-button" onclick="checkCombination()">Unlock</button>
+        </form>
+
+        <div id="result-message"></div>
+    </div>
+
+    <div id="popup-box">
+        <div id="popup-message">Incorrect Password</div>
+        <a id="close-popup" onclick="closePopup()">CLOSE</a>
+    </div>
+    <div id="popup-box1">
+        <div id="popup-message">Sattilite Connected</div>
+        <a id="close-popup" onclick="closePopup()">CLOSE</a>
+    </div>
+    <div id="c1">
+        <h1 id="he1">Challenge 1</h1>
+        <button id="bt1"><a href="challenge1.html">Go</a></button>
+    </div>
+    <div id="c2">
+        <h1 id="he1">Challenge 2</h1>
+        <button id="bt1" ><a href="challenge2.html">Go</a></button>
+    </div>
+   
+    <div id="c3">
+        <h1 id="he1">Challenge 3</h1>
+        <button id="bt1"><a href="hefcbuycbwycbwycbwubcywbcibiycbflag=1hbchyfiuhuygyug5rcy7h6g656h88jh5ihbvihfvbkwhrvbihrvbweitphvbe.html">Go</a></button>
+    </div>
+    <div id="c4">
+        <h1 id="he1">Challenge 4</h1>
+        <button id="bt1"><a href="challenge4.html">Go</a></button>
+    </div>
+
+    <audio id="alert-sound" src="" preload="auto"></audio>
+    <audio id="congratulations-sound" src="" preload="auto"></audio>
+
+
+
+    <script>
+
+        document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey || e.keyCode==123) {
+        e.stopPropagation();
+        e.preventDefault();
+        }
+        });
+
+        
+        function validateInput(element) {
+            // Allow only numeric characters
+            element.value = element.value.replace(/[^0-9]/g, '');
+
+            // Ensure a single character
+            if (element.value.length > 1) {
+                element.value = element.value.slice(0, 1);
+            }
+        }
+
+        function checkCombination() {
+            // Replace these values with the correct combination
+            const correctCombination = [5, 7, 1, 8];
+
+            // Get user input
+            const userInput = [
+                parseInt(document.getElementById('vault-input1').value),
+                parseInt(document.getElementById('vault-input2').value),
+                parseInt(document.getElementById('vault-input3').value),
+                parseInt(document.getElementById('vault-input4').value)
+            ];
+
+            // Check if the combination is correct
+            const isCorrect = userInput.every((value, index) => value === correctCombination[index]);
+
+            const popupBox = document.getElementById('popup-box');
+            const popupBox1 = document.getElementById('popup-box1');
+
+            // Display result message
+            const resultMessage = document.getElementById('result-message');
+            resultMessage.textContent = isCorrect ? "Congratulations! You are a winner!" : "Try again";
+            resultMessage.style.color = isCorrect ? "#2ecc71" : "#e74c3c";
+
+            if (isCorrect) {
+                resultMessage.textContent = "Congratulations! You are a winner!";
+                resultMessage.style.color = "#2ecc71";
+                // Redirect to the fireworks pag
+                popupBox1.style.display = 'block';
+               //  window.location.href = 'sec.html';
+            } else {
+                // Display pop-up box
+                popupBox.style.display = 'block';
+                // Play alert sound
+                document.getElementById('alert-sound').play();
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('popup-box').style.display = 'none';
+            document.getElementById('popup-box1').style.display = 'none';
+        }
+
+        function closePopup() {
+        const popupBox = document.getElementById('popup-box');
+        const popupBox1 = document.getElementById('popup-box1');
+        const alertSound = document.getElementById('alert-sound');
+
+        // Pause the audio
+        alertSound.pause();
+        alertSound.currentTime = 0; // Reset the audio to the beginning
+
+        // Hide the pop-up box
+        popupBox.style.display = 'none';
+        popupBox1.style.display = 'none';
+    }
+
+setInterval(1000)
+    </script>
+
+</body>
+
+</html>
